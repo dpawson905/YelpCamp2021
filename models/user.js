@@ -16,6 +16,10 @@ const UserSchema = new Schema({
     required: true,
     trim: true,
   },
+  image: {
+    path: String,
+    filename: String
+  },
   isVerified: {
     type: Boolean,
     required: true,

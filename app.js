@@ -119,6 +119,7 @@ app.use(
         "blob:",
         "data:",
         "https://res.cloudinary.com/douqbebwk/", //SHOULD MATCH YOUR CLOUDINARY ACCOUNT!
+        "https://res.cloudinary.com/campcloud/",
         "https://images.unsplash.com",
       ],
       fontSrc: ["'self'", ...fontSrcUrls],
@@ -137,6 +138,8 @@ app.use((req, res, next) => {
   res.locals.currentUser = req.user;
   res.locals.success = req.flash("success");
   res.locals.error = req.flash("error");
+  res.locals.token = req.query.token;
+  res.locals.title = process.env.APP_NAME;
   next();
 });
 

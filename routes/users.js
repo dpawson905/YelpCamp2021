@@ -21,6 +21,8 @@ router
     users.login
   );
 
+router.get('/verify/token', catchAsync(users.verifyFromEmail));
+
 router.get("/logout", users.logout);
 
 module.exports = router;
