@@ -76,6 +76,11 @@ const sessionConfig = {
   },
 };
 
+if (app.get("env") === "production") {
+  app.set("trust proxy", true); // trust first proxy
+  sessionConfig.cookie.secure = true; // serve secure cookies
+}
+
 app.use(session(sessionConfig));
 app.use(flash());
 app.use(helmet());
