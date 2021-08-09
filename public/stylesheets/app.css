@@ -1,9 +1,34 @@
 #cluster-map {
-    width: 100%;
-    height: 500px;
+  width: 100%;
+  height: 500px;
 }
 
 #map {
-    width: 100%;
-    height: 300px;
+  width: 100%;
+  height: 300px;
+}
+
+.message {
+  position: fixed;
+  top: 10%;
+  min-width: 20vw;
+  max-width: 50vw;
+  right: 10px;
+  z-index: 999;
+  overflow: hidden;
+}
+
+@media only screen and (max-width: 992px) {
+  .message {
+    position: fixed;
+    top: 10vh;
+    left: 4vw;
+    right: 5vw;
+    min-width: 90vw;
+    max-width: 90vw;
+    z-index: 999;
+  }
+  .custom-hide {
+    opacity: 0;
+  }
 }
