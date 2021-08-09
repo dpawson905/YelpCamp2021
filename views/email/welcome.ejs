@@ -1,17 +1,18 @@
-<%- include('../partials/header')%>
-  <div class="hero">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col">
-          <div class="hero-text-box shadow-lg p-5">
-            <h1>Hello Camper</h1>
-            <br />
-            <p class="lead">Welcome to YelpCamp</p>
-            <p>Please click the button below to verify your account</p>
-            <a href="#" class="btn btn-primary">Verify your account</a>
-          </div>
-        </div>
-      </div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to YelpCamp <%= username %> </title>
+  </head>
+  <body>
+    <div>
+      <h1>Hello Camper</h1>
+      <br />
+      <p>Welcome to YelpCamp</p>
+      <p>Please click the button below to verify your account</p>
+      <a href="<%= url %>" class="btn btn-primary">Verify your account</a>
     </div>
-  </div>
-<%- include('../partials/footer')%>
+  </body>
+</html>
